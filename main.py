@@ -12,6 +12,7 @@ CONFIG = {}
 
 admin = ''  # NOTE: This is later set in the config file!
 shutdown = "{}shutdown".format(spicytwitch.bot.modules.DEFAULT_COMMAND_PREFIX)
+upgrade = "{}upgrade".format(spicytwitch.bot.modules.DEFAULT_COMMAND_PREFIX)
 entrance_message = "sfhSORA This chat needs some extra spices! Good thing I'm here now. sfhSORA"
 shutdown_message = (
     "Fuck, the dev's killing me off now. I only wanted to spice up chat FeelsBadMan "

@@ -102,7 +102,7 @@ while True:
                     mass_notice(shutdown_message)
                     break
                 elif user.command.lower() == upgrade and user.name.lower() == admin:
-                    logger.info("Recieved upgrade command from admin."
+                    logger.info("Recieved upgrade command from admin.")
                     mass_notice(upgrade_message)
                     break
                 else:

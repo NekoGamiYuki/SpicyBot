@@ -25,7 +25,7 @@ upgrade_message = (
 logger = spicytwitch.log_tools.create_logger()
 
 # Other functions---------------------------------------------------------------
-def mass_notice(message:str)
+def mass_notice(message:str):
     for channel in spicytwitch.irc.channels.keys():
         spicytwitch.irc.chat(message, channel)
 

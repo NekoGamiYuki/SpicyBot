@@ -130,7 +130,7 @@ for channel in os.listdir(quotes_directory):
                     quote_text, quoted_person, quote_date
                 ])
             except IndexError:
-                warning.warnings(
+                warnings.warn(
                     "Issue parsing quotes file: {}".format(
                         os.path.join(quotes_directory, channel)
                     )

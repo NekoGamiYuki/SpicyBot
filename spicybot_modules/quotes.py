@@ -329,8 +329,6 @@ with open(nicknames_file_path, 'r') as nicknames_file:
 
         nicknames[channel] = nickname
 
-print(nicknames)
-
 def save_nicknames():
     with open(nicknames_file_path, 'w') as nicknames_file:
         for channel in nicknames:

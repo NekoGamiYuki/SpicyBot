@@ -17,14 +17,20 @@ shutdown_message = (
     "Fuck, the dev's killing me off now. I only wanted to spice up chat FeelsBadMan "
     "(Bot is shutting down)"
 )
+upgrade_message = (
+    "Dev is gonna upgrade me now, brb FeelsGoodMan. (Bot is shutting dopwn for upgrades"
+    ". Will return later.)"
+)
 
 logger = spicytwitch.log_tools.create_logger()
 
 # Other functions---------------------------------------------------------------
-def cleanup():
+def mass_notice(message:str)
     for channel in spicytwitch.irc.channels.keys():
-        spicytwitch.irc.chat(shutdown_message, channel)
+        spicytwitch.irc.chat(message, channel)
 
+
+def cleanup():
     spicytwitch.irc.disconnect()
     spicytwitch.bot.run_cleanup()
 
@@ -93,6 +99,11 @@ while True:
                 user = spicytwitch.irc.user
                 if user.command.lower() == shutdown and user.name.lower() == admin:
                     logger.info("Received shutdown command from admin.")
+                    mass_notice(shutdown_message)
+                    break
+                elif user.command.lower() == upgrade and user.name.lower() == admin:
+                    logger.info("Recieved upgrade command from admin."
+                    mass_notice(upgrade_message)
                     break
                 else:
                     logger.debug("Data will be passed to bot manager")
